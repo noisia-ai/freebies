@@ -1,0 +1,355 @@
+{
+  "meta": {
+    "project": "Cheaf Perception Gap",
+    "generated_at": "2026-04-22",
+    "source": "Sprinklr QuickSearch-2 export + xlsx posts/articles",
+    "window_days": 90,
+    "window_start": "2026-01-01",
+    "window_end": "2026-04-22",
+    "markets_analyzed": ["AR", "CL", "MX", "CO", "US"],
+    "total_signals": 1131,
+    "total_reach": 2713425
+  },
+
+  "hero_finding": {
+    "headline": "Por cada persona que recomienda Cheaf en LATAM, 2.8 la critican antes de probarla.",
+    "subline": "Pero los usuarios reales cuentan una historia radicalmente distinta.",
+    "closer": "Esto no es un problema de producto. Es un problema de narrativa.",
+    "ratio_value": 2.81,
+    "ratio_calculation": "396 negativas / 141 positivas = 2.81"
+  },
+
+  "topline_metrics": {
+    "total_mentions": 1131,
+    "total_reach": 2713425,
+    "sentiment": {
+      "positive": { "count": 141, "pct": 12.5 },
+      "neutral":  { "count": 590, "pct": 52.2 },
+      "negative": { "count": 396, "pct": 35.1 }
+    },
+    "net_sentiment_score": -22.6,
+    "neg_pos_ratio": 2.81
+  },
+
+  "volume_by_month": [
+    { "month": "2026-01", "label": "Enero",   "mentions": 163 },
+    { "month": "2026-02", "label": "Febrero", "mentions": 628, "event": "viral_crisis" },
+    { "month": "2026-03", "label": "Marzo",   "mentions": 220 },
+    { "month": "2026-04", "label": "Abril",   "mentions": 120, "partial": true }
+  ],
+
+  "markets": [
+    {
+      "code": "AR",
+      "flag": "🇦🇷",
+      "name": "Argentina",
+      "mentions_total": 252,
+      "pct_of_total": 22.3,
+      "sentiment": { "positive": 24, "neutral": 186, "negative": 41 },
+      "neg_pos_ratio": 1.71,
+      "sentiment_pcts": { "positive": 9.5, "neutral": 73.8, "negative": 16.3 },
+      "reach_level": "high",
+      "trend": "declining_from_peak",
+      "diagnosis": "Momentum + crisis simultáneos. El meme viral nace aquí.",
+      "recommendation": "Contra-narrativa liderada por micro-advocates verificados, no por códigos masivos.",
+      "key_context": ["@reydegonnet meme viral origin", "@ahorraconana creator activity", "KFC partnership mentions"]
+    },
+    {
+      "code": "CL",
+      "flag": "🇨🇱",
+      "name": "Chile",
+      "mentions_total": 145,
+      "pct_of_total": 12.8,
+      "sentiment": { "positive": 4, "neutral": 64, "negative": 77 },
+      "neg_pos_ratio": 19.25,
+      "sentiment_pcts": { "positive": 2.8, "neutral": 44.1, "negative": 53.1 },
+      "reach_level": "medium",
+      "trend": "declining",
+      "diagnosis": "Sentiment catastrófico. Contexto económico hace que Cheaf se lea como respuesta a crisis, no como innovación.",
+      "recommendation": "Reposicionamiento desde 'rescate de comida' hacia 'ahorro digno'.",
+      "key_context": ["encarecimiento canasta básica", "colaciones escolares", "Jumbo partnership", "Natalia Paredes ejecutiva"],
+      "is_critical_alert": true
+    },
+    {
+      "code": "MX",
+      "flag": "🇲🇽",
+      "name": "México",
+      "mentions_total": 96,
+      "pct_of_total": 8.5,
+      "sentiment": { "positive": 5, "neutral": 38, "negative": 52 },
+      "neg_pos_ratio": 10.40,
+      "sentiment_pcts": { "positive": 5.2, "neutral": 39.6, "negative": 54.2 },
+      "reach_level": "high_via_earned_media",
+      "trend": "stable",
+      "diagnosis": "Fase educacional ejecutándose bien. Earned media premium compensa sentiment social.",
+      "recommendation": "Mantener y escalar el playbook actual.",
+      "key_context": ["World Vision México partnership", "Mundial 2026 Monterrey PR angle", "El Economista, Milenio, Heraldo, Expansión coverage"]
+    },
+    {
+      "code": "CO",
+      "flag": "🇨🇴",
+      "name": "Colombia",
+      "mentions_total": 24,
+      "pct_of_total": 2.1,
+      "sentiment": { "positive": 2, "neutral": 11, "negative": 11 },
+      "neg_pos_ratio": 5.50,
+      "sentiment_pcts": { "positive": 8.3, "neutral": 45.8, "negative": 45.8 },
+      "reach_level": "low",
+      "trend": "growing",
+      "diagnosis": "Entrada nueva. Volumen bajo, discurso todavía no contaminado por meme AR.",
+      "recommendation": "Shaping narrativo proactivo ahora. Ventana estratégica estimada: 6 meses.",
+      "key_context": ["Jumbo + Metro partnerships", "Bogotá launch"]
+    },
+    {
+      "code": "US",
+      "flag": "🇺🇸",
+      "name": "Estados Unidos",
+      "mentions_total": 43,
+      "pct_of_total": 3.8,
+      "sentiment": { "positive": 1, "neutral": 17, "negative": 24 },
+      "neg_pos_ratio": 24.00,
+      "sentiment_pcts": { "positive": 2.3, "neutral": 39.5, "negative": 55.8 },
+      "reach_level": "medium",
+      "trend": "reactive",
+      "diagnosis": "Audiencia LATAM migrante replicando discurso crítico argentino.",
+      "recommendation": "No es prioridad estratégica este trimestre.",
+      "key_context": ["replicación diaspora latinx del meme viral"]
+    }
+  ],
+
+  "viral_event": {
+    "name": "Apple en cada Esquina",
+    "origin": {
+      "handle": "@reydegonnet",
+      "full_name": "felo",
+      "platform": "X",
+      "country": "AR",
+      "reach_max": 79487,
+      "followers": 56412,
+      "influencer_index": 81,
+      "original_tweet": "Los celulares vienen sin cargadores ni auriculares, las cajas de los juegos vienen vacías y con códigos para una tienda online que puede desaparecer. Te venden comida que igual van a tirar a un 70% ingresando un CUPÓN. Cada vez hay más avances pero seguimos retrocediendo",
+      "date_approximate": "2026-02"
+    },
+    "propagation": {
+      "total_replications_estimated": 380,
+      "dominant_variant": "Apple [Store] en cada esquina",
+      "demographic_skew": "male_predominant",
+      "peak_duration_weeks": 3,
+      "associated_terms_volume": {
+        "celulares": 158,
+        "cargadores": 157,
+        "auriculares": 156,
+        "cajas": 156,
+        "vacias": 156,
+        "codigos": 158,
+        "desaparecer": 156,
+        "retrocediendo": 156,
+        "apple": 197,
+        "esquina": 185
+      }
+    },
+    "cultural_decoding": {
+      "code_activated": "Cinismo del consumidor desencantado",
+      "cultural_level": ["regional_LATAM", "generational_millennial_genz"],
+      "underlying_narrative": "La promesa de innovación que termina siendo precarización disfrazada",
+      "implication": "Cheaf fue capturado en un frame cultural ajeno — fue usado como ejemplo de algo más grande"
+    }
+  },
+
+  "perception_gap": {
+    "critical_vocabulary": {
+      "description": "Palabras con carga negativa dominantes en menciones críticas",
+      "words": [
+        { "word": "atención (en sentido 'ojo con')", "count": 196 },
+        { "word": "vencimiento", "count": 188 },
+        { "word": "mal (estado)", "count": 185 },
+        { "word": "tirar", "count": 164 },
+        { "word": "venden", "count": 160 },
+        { "word": "70%", "count": 159 },
+        { "word": "cupón", "count": 156 },
+        { "word": "desaparecer", "count": 156 },
+        { "word": "vacías", "count": 156 }
+      ],
+      "character": "concrete_emotional"
+    },
+    "experiential_vocabulary": {
+      "description": "Palabras asociadas a experiencia real positiva",
+      "words": [
+        { "word": "app", "count": 52 },
+        { "word": "solución", "count": 36 },
+        { "word": "impacto", "count": 31 },
+        { "word": "toneladas", "count": 28 },
+        { "word": "excedentes", "count": 26 },
+        { "word": "permite", "count": 24 },
+        { "word": "ambiental", "count": 26 },
+        { "word": "experiencia", "count": 19 }
+      ],
+      "character": "abstract_institutional"
+    },
+    "gender_sentiment_ratio": {
+      "male": { "positive": 14, "negative": 102, "neg_pos_ratio": 7.29 },
+      "female": { "positive": 21, "negative": 71, "neg_pos_ratio": 3.38 },
+      "unknown": { "positive": 106, "negative": 223, "neg_pos_ratio": 2.10 }
+    },
+    "insight": "El vocabulario negativo es concreto y emocional. El positivo es abstracto e institucional. Cheaf está ganando la conversación macro y perdiendo la conversación íntima."
+  },
+
+  "channels": [
+    { "channel": "X (Twitter)", "mentions": 680, "pct": 60.1, "role": "crisis_narrative" },
+    { "channel": "News", "mentions": 307, "pct": 27.1, "role": "legitimacion" },
+    { "channel": "Instagram", "mentions": 62, "pct": 5.5, "role": "authentic_conversion" },
+    { "channel": "Print", "mentions": 39, "pct": 3.4, "role": "earned_media" },
+    { "channel": "YouTube", "mentions": 14, "pct": 1.2, "role": "long_form_discovery" },
+    { "channel": "Reddit", "mentions": 10, "pct": 0.9, "role": "niche_discussion" },
+    { "channel": "Podcast", "mentions": 9, "pct": 0.8, "role": "executive_interviews" },
+    { "channel": "Bluesky", "mentions": 3, "pct": 0.3, "role": "emerging" },
+    { "channel": "Facebook", "mentions": 2, "pct": 0.2, "role": "minimal" }
+  ],
+
+  "content_types": [
+    { "type": "Link", "mentions": 392 },
+    { "type": "Photo", "mentions": 311 },
+    { "type": "Video", "mentions": 89 },
+    { "type": "Audio", "mentions": 9 },
+    { "type": "Carousel", "mentions": 4 },
+    { "type": "Gif", "mentions": 2 }
+  ],
+
+  "top_earned_media_domains": [
+    { "domain": "msn.com", "moz_rank": 7.9, "country": "global" },
+    { "domain": "eleconomista.com.mx", "moz_rank": 6.0, "country": "MX" },
+    { "domain": "latercera.com", "moz_rank": 6.0, "country": "CL" },
+    { "domain": "milenio.com", "moz_rank": 6.0, "country": "MX" },
+    { "domain": "perfil.com", "moz_rank": 5.9, "country": "AR" },
+    { "domain": "expansion.mx", "moz_rank": 5.9, "country": "MX" },
+    { "domain": "caracol.com.co", "moz_rank": 5.8, "country": "CO" },
+    { "domain": "heraldodemexico.com.mx", "moz_rank": 5.8, "country": "MX" },
+    { "domain": "excelsior.com.mx", "moz_rank": 5.7, "country": "MX" },
+    { "domain": "elmostrador.cl", "moz_rank": 5.6, "country": "CL" }
+  ],
+
+  "influence_architecture": {
+    "authorities": {
+      "description": "Prensa especializada y outlets institucionales",
+      "total_mentions": 307,
+      "pct_of_volume": 27.1,
+      "role": "Legitimación, no conversión",
+      "reach_range": [100000, 1232206],
+      "examples": [
+        { "handle": "@telediariomty", "platform": "X", "reach_max": 1232206 },
+        { "handle": "@MilenioMty", "platform": "X", "reach_max": 107204 },
+        { "handle": "Re-Evolución México", "platform": "X", "reach_max": 3267 }
+      ],
+      "verdict": "Excelente para construir credibilidad. No mueve descargas de app."
+    },
+    "aspirationals_creators": {
+      "description": "Influencers y creators con códigos promocionales",
+      "estimated_mentions": 150,
+      "role": "Awareness masivo con costo en credibilidad",
+      "examples": [
+        { "handle": "@denisse_belen_gonzalez", "code": "DENUU20", "platform": "Instagram" },
+        { "handle": "@ahorraconana", "code": "AHORRO20", "platform": "X", "reach_max": 325051 }
+      ],
+      "saturation_signal": "Códigos repetidos dominan volumen sin mover sentiment. El lector ya los lee como spam.",
+      "verdict": "Dilución de mensaje por saturación de códigos."
+    },
+    "peers_organic": {
+      "description": "Cuentas de usuarias reales + creators orgánicas sin códigos propios",
+      "estimated_mentions": 120,
+      "role": "Conversión silenciosa. Alta afinidad. Bajo reach individual.",
+      "examples": [
+        { "handle": "cheaf.chile", "platform": "Instagram", "note": "cuenta de usuaria, no oficial" },
+        { "handle": "cheaf.mexico", "platform": "Instagram", "note": "cuenta de usuaria" },
+        { "handle": "cheaf.argentina", "platform": "Instagram" }
+      ],
+      "paradox": "Cheaf no está invirtiendo aquí pese a ser el arquetipo que más convierte en esta categoría.",
+      "verdict": "Arquetipo infra-explotado. Oportunidad estratégica central."
+    }
+  },
+
+  "hashtags": [
+    { "tag": "#noticias", "total": 77, "positive": 0, "neutral": 36, "negative": 41 },
+    { "tag": "#cheaf", "total": 54, "positive": 28, "neutral": 25, "negative": 1 },
+    { "tag": "#comida", "total": 36, "positive": 22, "neutral": 14, "negative": 0 },
+    { "tag": "#chile", "total": 19, "positive": 13, "neutral": 6, "negative": 0 },
+    { "tag": "#alimentos", "total": 11, "positive": 2, "neutral": 8, "negative": 1 },
+    { "tag": "#ahorro", "total": 8, "positive": 6, "neutral": 2, "negative": 0 },
+    { "tag": "#argentina", "total": 7, "positive": 3, "neutral": 4, "negative": 0 },
+    { "tag": "#app", "total": 6, "positive": 5, "neutral": 1, "negative": 0 },
+    { "tag": "#cdmx", "total": 5, "positive": 4, "neutral": 0, "negative": 1 }
+  ],
+
+  "partnerships_detected": [
+    { "partner": "World Vision México", "context": "Campaña 'Suficiente' contra desperdicio, huertos urbanos", "status": "active" },
+    { "partner": "Jumbo Chile", "context": "Supermercado integrado", "status": "active" },
+    { "partner": "Metro Colombia", "context": "Supermercado integrado", "status": "active" },
+    { "partner": "KFC", "context": "Referencia en contexto de últimos 12 meses", "status": "detected" },
+    { "partner": "Mundial 2026 / Monterrey", "context": "Encuesta propia Cheaf — PR angle", "status": "campaign" }
+  ],
+
+  "executives_mentioned": [
+    { "name": "Kim Durand", "role": "CEO", "mention_count_estimated": 19 },
+    { "name": "Natalia Paredes", "role": "ejecutiva (Chile context)", "mention_count_estimated": 73 },
+    { "name": "Laure Delalande", "role": "ejecutiva", "mention_count_estimated": 10 },
+    { "name": "Braulio Valenzuela", "role": "ejecutivo", "mention_count_estimated": 33 }
+  ],
+
+  "strategic_bets": [
+    {
+      "id": "bet_1",
+      "title": "Reframing de categoría",
+      "subtitle": "De 'rescate de comida próxima a vencer' → 'comida fresca al final del ciclo de góndola'",
+      "rationale": "381 menciones asocian Cheaf con 'vencimiento' en contextos negativos. 164 con 'tirar'. Esos dos términos son la batalla semántica principal.",
+      "estimated_impact_sentiment_shift_pts": [8, 15],
+      "estimated_timeline_quarters": [2, 3],
+      "probability": "high",
+      "scope": "regional_all"
+    },
+    {
+      "id": "bet_2",
+      "title": "Anti-spam influencer playbook",
+      "subtitle": "Migrar de códigos masivos → 20 micro-advocates verificados con contenido 'después de la compra'",
+      "rationale": "El quote más positivo del dataset ('Rescaté todo esto por menos de $20.000') es de una usuaria chilena anónima sin código. La autenticidad convierte. El código promocional la neutraliza.",
+      "estimated_impact_sentiment_shift_pts": [3, 7],
+      "estimated_timeline_quarters": [1, 2],
+      "probability": "medium-high",
+      "scope": "regional_all"
+    },
+    {
+      "id": "bet_3",
+      "title": "Chile como caso urgente",
+      "subtitle": "Construir un playbook específicamente chileno desde la narrativa de 'ahorro digno', no de 'sostenibilidad'",
+      "rationale": "77 menciones negativas vs 4 positivas en Chile. El vocabulario asociado incluye 'canasta básica', 'colaciones escolares', 'mil pesos' — lenguaje de escasez, no de consumo consciente.",
+      "estimated_impact_sentiment_shift_pts": [10, 20],
+      "estimated_timeline_quarters": [2, 2],
+      "probability": "high",
+      "scope": "chile_only"
+    }
+  ],
+
+  "methodologies_applied": [
+    {
+      "name": "Triggers & Barriers",
+      "applied_in_section": 3,
+      "section_title": "The Perception Gap",
+      "business_question": "¿Por qué los consumidores adoptan (o no) Cheaf?",
+      "structure": "2 polarities × 4 dimensions (Cultural · Social · Personal · Psychological)"
+    },
+    {
+      "name": "Cultural Codes Decoding",
+      "applied_in_section": 4,
+      "section_title": "The Viral Crisis, Decoded",
+      "business_question": "¿Qué símbolos, narrativas y rituales culturales resuenan con mi audiencia?",
+      "structure": "4 cultural levels (Universal · Regional · Generational · Subcultural)",
+      "code_identified": "Cinismo del consumidor desencantado"
+    },
+    {
+      "name": "Influence Architecture",
+      "applied_in_section": 6,
+      "section_title": "The Influencer Paradox",
+      "business_question": "¿Quién influye en las decisiones de mi audiencia, cómo, y cuándo en el journey?",
+      "structure": "5 archetypes (Authorities · Aspirationals · Peers · Critics · Creators)",
+      "archetypes_identified_in_cheaf_conversation": ["Authorities", "Aspirationals/Creators", "Peers (underinvested)"]
+    }
+  ]
+}
