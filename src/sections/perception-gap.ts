@@ -60,9 +60,11 @@ export const renderPerceptionGap = () => `
         <p>
           No es que Cheaf comunique mal. Es que la categoría entera de food waste rescue fue capturada por un frame cultural ajeno. Esa es la mala noticia. La buena: los frames se cambian.
         </p>
+        <p>
+          Cheaf México ya está respondiendo — “No es lo que piensas. Es mejor.”, ALV, HDTPM, “Wey, no mermes” son resignificación cultural precisa, no discurso aspiracional. La pregunta no es si el enfoque funciona. Es cómo viaja a los mercados donde todavía no existe.
+        </p>
       </div>
       <p class="method-footnote"><em>Framework aplicado: Triggers &amp; Barriers · Metodología Noisia</em></p>
     </div>
   </section>
 `;
-

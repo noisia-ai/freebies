@@ -17,7 +17,7 @@ import { renderMarkets } from "./sections/markets";
 import { renderPerceptionGap } from "./sections/perception-gap";
 import { renderStrategicBets } from "./sections/strategic-bets";
 import { renderViralCrisis } from "./sections/viral-crisis";
-import { initSiteNav, renderSiteFooter, renderSiteNav } from "./site-chrome";
+import { renderSiteFooter } from "./site-chrome";
 import { countUp, revealOnScroll } from "./utils/intersection";
 
 const app = document.querySelector<HTMLElement>("#app");
@@ -27,7 +27,7 @@ if (!app) {
 }
 
 app.innerHTML = `
-  ${renderSiteNav()}
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
   <main class="page-shell" id="main-content">
     ${renderHero()}
     ${renderLandscape()}
@@ -41,7 +41,6 @@ app.innerHTML = `
   ${renderSiteFooter()}
 `;
 
-initSiteNav();
 initLandscapeDashboard();
 initPerceptionGapChart();
 initViralTimeline();

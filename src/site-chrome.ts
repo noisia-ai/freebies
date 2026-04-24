@@ -1,8 +1,8 @@
 import logoRaw from "../assets/logo_black.svg?raw";
 
 const navItems = [
-  { href: "#landscape", label: "Landscape" },
-  { href: "#perception-gap", label: "Gap" },
+  { href: "#landscape", label: "Panorama" },
+  { href: "#perception-gap", label: "Perception Gap" },
   { href: "#viral-crisis", label: "Febrero" },
   { href: "#markets", label: "Mercados" },
   { href: "#influence", label: "Influencia" },
@@ -43,24 +43,37 @@ export const renderSiteNav = () => `
 export const renderSiteFooter = () => `
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <div class="site-footer__brand">
-        <span class="site-footer__logo" aria-hidden="true">${logoRaw}</span>
-        <p>
-          Social Intelligence Snapshot para Cheaf. Una lectura ejecutiva de 1,131 señales públicas entre enero y abril de 2026.
-        </p>
+      <div class="site-footer__hero">
+        <div class="site-footer__brand">
+          <span class="site-footer__eyebrow">Noisia Snapshot · Abril 2026</span>
+          <span class="site-footer__logo" aria-hidden="true">${logoRaw}</span>
+          <p>
+            Social Intelligence Snapshot para Cheaf. Una lectura ejecutiva de 1,131 señales públicas entre enero y abril de 2026.
+          </p>
+        </div>
+
+        <a class="site-footer__back" href="#app">Volver arriba</a>
       </div>
 
-      <div class="site-footer__nav" aria-label="Secciones del reporte">
-        ${navItems
-          .map((item) => `<a href="${item.href}">${item.label}</a>`)
-          .join("")}
-      </div>
+      <div class="site-footer__rail">
+        <div class="site-footer__group" aria-label="Secciones del reporte">
+          <span class="site-footer__label">Secciones</span>
+          <div class="site-footer__chips">
+            ${navItems
+              .map((item) => `<a class="site-footer__chip" href="${item.href}">${item.label}</a>`)
+              .join("")}
+          </div>
+        </div>
 
-      <div class="site-footer__meta">
-        <span>90 días</span>
-        <span>12 fuentes</span>
-        <span>AR · CL · MX · CO</span>
-        <span>Abril 2026</span>
+        <div class="site-footer__group">
+          <span class="site-footer__label">Cobertura</span>
+          <div class="site-footer__stats">
+            <span class="site-footer__stat">90 días</span>
+            <span class="site-footer__stat">12 fuentes</span>
+            <span class="site-footer__stat">AR · CL · MX · CO</span>
+            <span class="site-footer__stat">Abril 2026</span>
+          </div>
+        </div>
       </div>
     </div>
   </footer>

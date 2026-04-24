@@ -27,7 +27,7 @@ export const perceptionQuotes = {
       source: "Usuario X"
     },
     {
-      quote: "Venden comida que esta por vencer.",
+      quote: "Venden comida que está por vencer.",
       source: "Usuario X · SV"
     },
     {
@@ -115,11 +115,11 @@ export const strategicBets = [
   {
     eyebrow: "Apuesta 1",
     title:
-      "De “rescate de comida próxima a vencer” → “comida fresca al final del ciclo de góndola”",
+      "Exportar el playbook mexicano — localizado — a Chile y Argentina",
     body:
-      "El problema no es convencer al escéptico de que la comida no está mala. El problema es que la palabra “rescate” activa la sospecha. Hablar de “ciclo de góndola”, “última hornada” o “compra al final del día” reubica a Cheaf fuera del territorio emocional de la comida podrida y la acerca a uno más neutro: eficiencia temporal.",
+      "“No es lo que piensas. Es mejor.” ya es el antídoto cultural al frame que captura la categoría. ALV, HDTPM, “Wey, no mermes”: humor local, resignificación de lo cotidiano, cero discurso aspiracional. Funciona en CDMX porque respeta el código mexicano.\n\nEl problema es que ese código no viaja solo. La batalla semántica — 381 menciones asocian Cheaf con “vencimiento”, 164 con “tirar” — se está ganando en México con humor, y se está perdiendo en Argentina y Chile sin contra-narrativa equivalente. No es replicar la campaña traducida. Es aplicar la misma lógica — resignificación humorística desde el código local — en los dos mercados donde la conversación se está definiendo.",
     proof:
-      "381 menciones asocian Cheaf con “vencimiento” en contextos negativos. 164 con “tirar”. Esos dos términos son la batalla semántica principal."
+      "El meme “apple en cada esquina” viralizó en Argentina en febrero de 2026, antes de que la campaña MX saliera al aire en abril. Chile, sin contra-narrativa equivalente, sostiene el peor ratio de la región (19:1). Es la ventana más abierta para actuar primero."
   },
   {
     eyebrow: "Apuesta 2",
@@ -144,4 +144,3 @@ export const strategicBets = [
 export const toplineMeta = `${data.meta.window_days} días · 12 fuentes · ${data.meta.total_signals.toLocaleString(
   "es-MX"
 )} señales · AR · CL · MX · CO`;
-

@@ -32,10 +32,6 @@ export const renderViralCrisis = () => `
         <p class="chart-panel__annotation" data-viral-annotation>
           Cheaf fue capturado en un frame ajeno: “antes prometían abundancia, ahora venden escasez maquillada”.
         </p>
-        <div class="toggle-group" role="tablist" aria-label="Vista del mapa viral" data-viral-toggle>
-          <button class="toggle-button is-active" type="button" role="tab" aria-selected="true" data-mode="narrative">Narrativa</button>
-          <button class="toggle-button" type="button" role="tab" aria-selected="false" data-mode="data">Data</button>
-        </div>
         <div class="chart-surface chart-surface--compact" id="viralDiagram" role="img" aria-label="Diagrama narrativo de propagación del meme viral"></div>
       </div>
 
@@ -52,4 +48,3 @@ export const renderViralCrisis = () => `
     </div>
   </section>
 `;
-

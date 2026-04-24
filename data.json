@@ -297,9 +297,9 @@
   "strategic_bets": [
     {
       "id": "bet_1",
-      "title": "Reframing de categoría",
-      "subtitle": "De 'rescate de comida próxima a vencer' → 'comida fresca al final del ciclo de góndola'",
-      "rationale": "381 menciones asocian Cheaf con 'vencimiento' en contextos negativos. 164 con 'tirar'. Esos dos términos son la batalla semántica principal.",
+      "title": "Playbook mexicano localizado",
+      "subtitle": "Exportar el playbook mexicano — localizado — a Chile y Argentina",
+      "rationale": "La batalla semántica — 381 menciones asocian Cheaf con 'vencimiento', 164 con 'tirar' — se está ganando en México con humor y resignificación cultural, y se está perdiendo en Argentina y Chile sin contra-narrativa equivalente.",
       "estimated_impact_sentiment_shift_pts": [8, 15],
       "estimated_timeline_quarters": [2, 3],
       "probability": "high",

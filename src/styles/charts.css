@@ -24,6 +24,43 @@
   min-height: 250px;
 }
 
+#perceptionChart {
+  position: relative;
+}
+
+.perception-chart__clusters {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.perception-cluster {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.perception-cluster--critical {
+  background: rgba(238, 11, 0, 0.1);
+  color: var(--tension);
+}
+
+.perception-cluster--experiential {
+  background: rgba(0, 143, 102, 0.1);
+  color: var(--positive);
+}
+
+.perception-chart__mount {
+  min-height: 280px;
+}
+
 #viralDiagram {
   min-height: unset;
 }
@@ -381,6 +418,16 @@
   .sparkline {
     height: 150px;
     margin-top: 18px;
+  }
+
+  .perception-chart__clusters {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+
+  .perception-chart__mount {
+    min-height: 252px;
   }
 
   #viralDiagram {

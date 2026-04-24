@@ -1,4 +1,4 @@
-import { data, getMarket, MarketCode, markets } from "../data";
+import { data, focusMarkets, getMarket, MarketCode } from "../data";
 import { compact, number, pct, reachLabel } from "../utils/format";
 
 const trendSeries: Record<MarketCode, number[]> = {
@@ -96,28 +96,21 @@ const renderGeoList = (code: MarketCode) => {
     `;
   }
 
-  const rows = [
-    ...markets.slice(0, 5).map((market) => ({
-      label: market.code,
-      value: market.pct_of_total
-    })),
-    { label: "Otros", value: 50.5 }
-  ];
-
   return `
     <div class="geo-list">
-      ${rows
+      ${focusMarkets
         .map(
-          (row) => `
+          (market) => `
             <div class="geo-row">
-              <strong>${row.label}</strong>
-              <span class="geo-track"><span class="geo-fill" style="width:${row.value * 2}%"></span></span>
-              <span>${pct(row.value)}</span>
+              <strong>${market.code}</strong>
+              <span class="geo-track"><span class="geo-fill" style="width:${Math.min(market.pct_of_total * 2.6, 100)}%"></span></span>
+              <span>${pct(market.pct_of_total)}</span>
             </div>
           `
         )
         .join("")}
     </div>
+    <p class="data-card__footnote">6 mercados con señal. Foco en 4.</p>
   `;
 };
 
@@ -153,25 +146,24 @@ const renderTiles = (code: MarketCode) => {
   const series = trendSeries[code] ?? trendSeries.ALL;
 
   return `
-    <article class="data-card">
+    <article class="data-card data-card--landscape">
       <span class="data-card__label">Volumen · ${view.title}</span>
       <div class="data-card__metric">${number(view.mentions)}</div>
       <p class="data-card__submetric">${view.reach} ${view.reachCaption}</p>
-      ${renderSparkline(series)}
     </article>
-    <article class="data-card">
+    <article class="data-card data-card--landscape">
       <span class="data-card__label">Sentiment split</span>
       <div class="data-card__metric">${pct(view.sentiment.negative)}</div>
       <p class="data-card__submetric">menciones negativas</p>
       ${renderSentiment(view.sentiment)}
     </article>
-    <article class="data-card">
+    <article class="data-card data-card--landscape">
       <span class="data-card__label">Distribución geo</span>
       <div class="data-card__metric">${code === "ALL" ? "6" : "1"}</div>
       <p class="data-card__submetric">${code === "ALL" ? "mercados con señal relevante" : "mercado filtrado"}</p>
       ${renderGeoList(code)}
     </article>
-    <article class="data-card">
+    <article class="data-card data-card--landscape data-card--spark">
       <span class="data-card__label">El pico que importa</span>
       <div class="data-card__metric">${code === "ALL" ? "56%" : view.code}</div>
       <p class="data-card__submetric">${trendCopy[code]}</p>

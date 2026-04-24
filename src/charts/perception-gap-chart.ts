@@ -22,13 +22,13 @@ const baseOptions: ApexOptions = {
     height: 310,
     toolbar: { show: false },
     animations: { enabled: true, speed: 450 },
-    fontFamily: "Google Sans, Inter Tight, sans-serif"
+    fontFamily: "Google Sans, system-ui, sans-serif"
   },
   dataLabels: { enabled: false },
   legend: {
     position: "top",
     horizontalAlign: "left",
-    fontFamily: "Google Sans, Inter Tight, sans-serif"
+    fontFamily: "Google Sans, system-ui, sans-serif"
   },
   grid: {
     borderColor: "#eeeeee",
@@ -52,6 +52,7 @@ const termOptions = (): ApexOptions => {
   return {
     ...baseOptions,
     colors: ["#ee0b00", "#008f66"],
+    legend: { show: false },
     plotOptions: {
       bar: {
         horizontal: true,
@@ -205,8 +206,27 @@ export const initPerceptionGapChart = () => {
   if (!root || !toggle || !annotation || !table) return;
 
   const render = (mode: PerceptionMode) => {
+    root.innerHTML = "";
+    root.classList.toggle("perception-chart--clustered", mode === "terms");
+
+    if (mode === "terms") {
+      root.insertAdjacentHTML(
+        "beforeend",
+        `
+          <div class="perception-chart__clusters" aria-hidden="true">
+            <span class="perception-cluster perception-cluster--critical">concreto · sensorial</span>
+            <span class="perception-cluster perception-cluster--experiential">abstracto · institucional</span>
+          </div>
+        `
+      );
+    }
+
+    const mount = document.createElement("div");
+    mount.className = "perception-chart__mount";
+    root.appendChild(mount);
+
     chart?.destroy();
-    chart = new ApexCharts(root, optionsByMode(mode));
+    chart = new ApexCharts(mount, optionsByMode(mode));
     chart.render();
     annotation.textContent = annotations[mode];
     table.innerHTML = tableByMode(mode);

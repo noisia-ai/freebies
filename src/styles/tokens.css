@@ -20,8 +20,8 @@
   --negative-soft: #fff0ef;
   --whisper: #c4a8e8;
 
-  --font-body: "Google Sans", "Inter Tight", system-ui, sans-serif;
-  --font-label: "Inter Tight", "Google Sans", system-ui, sans-serif;
+  --font-body: "Google Sans", system-ui, sans-serif;
+  --font-label: "Google Sans", system-ui, sans-serif;
 
   --radius-xs: 8px;
   --radius-sm: 12px;

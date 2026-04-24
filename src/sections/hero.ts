@@ -1,6 +1,6 @@
 import { data } from "../data";
 import { toplineMeta } from "../copy";
-import cheafLogoUrl from "../../assets/logo_cheaf.png";
+import cheafLogoUrl from "../../assets/logo_norm.svg";
 
 export const renderHero = () => `
   <header class="hero">
@@ -18,6 +18,7 @@ export const renderHero = () => `
           </div>
           <p class="hero__subline">${data.hero_finding.subline}</p>
           <p class="hero__closer">${data.hero_finding.closer}</p>
+          <p class="hero__teaser">Pero ese 2.8 es un promedio. Uno de los mercados tiene un ratio 7 veces peor. Llegamos ahí en tres scrolls.</p>
         </div>
       </div>
       <div class="hero__signature">${toplineMeta}</div>

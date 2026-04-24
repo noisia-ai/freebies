@@ -1,26 +1,64 @@
 export const revealOnScroll = () => {
+  document.documentElement.classList.add("has-scroll-reveal");
+
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
     .matches;
   const sections = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+  const groups = [
+    ".landscape-grid",
+    ".quote-column",
+    ".chart-panel",
+    ".timeline-layout",
+    ".viral-flow",
+    ".latam-map-wrap",
+    ".market-grid",
+    ".influence-grid",
+    ".influence-matrix",
+    ".bet-grid",
+    ".closing-block"
+  ];
+  const items = groups.flatMap((selector) =>
+    Array.from(document.querySelectorAll<HTMLElement>(selector)).flatMap((group) =>
+      (Array.from(group.children) as HTMLElement[]).map((item, index) => {
+        item.classList.add("reveal-item");
+        item.style.setProperty("--reveal-delay", `${index * 70}ms`);
+        return item;
+      })
+    )
+  );
 
   if (reducedMotion || !("IntersectionObserver" in window)) {
     sections.forEach((section) => section.classList.add("is-visible"));
+    items.forEach((item) => item.classList.add("is-visible"));
     return;
   }
 
-  const observer = new IntersectionObserver(
+  const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+          sectionObserver.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.16 }
+    { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
   );
 
-  sections.forEach((section) => observer.observe(section));
+  const itemObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          itemObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.18, rootMargin: "0px 0px -10% 0px" }
+  );
+
+  sections.forEach((section) => sectionObserver.observe(section));
+  items.forEach((item) => itemObserver.observe(item));
 };
 
 export const countUp = (node: HTMLElement, target: number) => {
