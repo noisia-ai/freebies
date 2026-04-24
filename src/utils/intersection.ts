@@ -42,7 +42,7 @@ export const revealOnScroll = () => {
         }
       });
     },
-    { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
+    { threshold: 0.04, rootMargin: "0px 0px 18% 0px" }
   );
 
   const itemObserver = new IntersectionObserver(
@@ -54,7 +54,7 @@ export const revealOnScroll = () => {
         }
       });
     },
-    { threshold: 0.18, rootMargin: "0px 0px -10% 0px" }
+    { threshold: 0.08, rootMargin: "0px 0px 10% 0px" }
   );
 
   sections.forEach((section) => sectionObserver.observe(section));
