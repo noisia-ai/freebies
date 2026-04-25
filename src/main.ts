@@ -18,6 +18,7 @@ import { renderPerceptionGap } from "./sections/perception-gap";
 import { renderStrategicBets } from "./sections/strategic-bets";
 import { renderViralCrisis } from "./sections/viral-crisis";
 import { renderSiteFooter } from "./site-chrome";
+import { initFluidBackground } from "./utils/fluid-background";
 import { countUp, revealOnScroll } from "./utils/intersection";
 
 const app = document.querySelector<HTMLElement>("#app");
@@ -27,6 +28,7 @@ if (!app) {
 }
 
 app.innerHTML = `
+  <canvas class="fluid-background" data-fluid-background aria-hidden="true"></canvas>
   <a class="skip-link" href="#main-content">Saltar al contenido</a>
   <main class="page-shell" id="main-content">
     ${renderHero()}
@@ -41,6 +43,7 @@ app.innerHTML = `
   ${renderSiteFooter()}
 `;
 
+initFluidBackground();
 initLandscapeDashboard();
 initPerceptionGapChart();
 initViralTimeline();
