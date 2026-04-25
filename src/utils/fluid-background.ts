@@ -81,18 +81,52 @@ export const initFluidBackground = () => {
   if (!ctx) return;
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const coarsePointer = window.matchMedia("(pointer: coarse)");
   let blobs: FluidBlob[] = [];
   let pattern: CanvasPattern | null = null;
   let raf = 0;
   let lastFrame = 0;
+  let viewportWidth = 0;
+  let viewportHeight = 0;
   let width = 0;
   let height = 0;
   let scale = 0.5;
+  let isTouchViewport = false;
 
-  const resize = () => {
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
-    const isMobile = viewportWidth < 700;
+  const getViewport = () => {
+    const nextWidth = window.innerWidth;
+    const nextHeight = window.innerHeight;
+    const nextIsTouchViewport = coarsePointer.matches || nextWidth < 700;
+    const screenHeight = window.screen ? window.screen.height : nextHeight;
+
+    return {
+      width: nextWidth,
+      height: nextIsTouchViewport
+        ? Math.max(nextHeight, viewportHeight, screenHeight)
+        : nextHeight,
+      isMobile: nextWidth < 700,
+      isTouch: nextIsTouchViewport
+    };
+  };
+
+  const resize = (force = false) => {
+    const nextViewport = getViewport();
+    const widthChanged = Math.abs(nextViewport.width - viewportWidth) > 8;
+    const heightChanged = Math.abs(nextViewport.height - viewportHeight) > 8;
+
+    if (!force && nextViewport.isTouch && !widthChanged) {
+      canvas.style.width = `${nextViewport.width}px`;
+      canvas.style.height = `${viewportHeight || nextViewport.height}px`;
+      return false;
+    }
+
+    if (!force && !widthChanged && !heightChanged) return false;
+
+    viewportWidth = nextViewport.width;
+    viewportHeight = nextViewport.height;
+    isTouchViewport = nextViewport.isTouch;
+
+    const isMobile = nextViewport.isMobile;
     scale = isMobile ? 0.42 : 0.5;
     width = Math.max(320, Math.floor(viewportWidth * scale));
     height = Math.max(560, Math.floor(viewportHeight * scale));
@@ -104,6 +138,7 @@ export const initFluidBackground = () => {
 
     blobs = createBlobs(width, height, isMobile);
     pattern = makeNoisePattern(ctx);
+    return true;
   };
 
   const drawBlob = (blob: FluidBlob, time: number) => {
@@ -177,19 +212,20 @@ export const initFluidBackground = () => {
 
   const start = () => {
     window.cancelAnimationFrame(raf);
-    if (reducedMotion.matches) {
+    if (reducedMotion.matches || isTouchViewport) {
       render(0);
       return;
     }
     raf = window.requestAnimationFrame(animate);
   };
 
-  resize();
+  resize(true);
   start();
 
   window.addEventListener("resize", () => {
-    resize();
-    render(performance.now());
+    const changed = resize();
+    if (!changed) return;
+    start();
   });
 
   document.addEventListener("visibilitychange", () => {
